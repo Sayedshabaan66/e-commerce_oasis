@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="css\styles_demo.css">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        height: max-content;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .rows-cols-1{
+        align-content: space-around; 
+        flex-wrap: nowrap; 
+        align-items: center;      
+      }
+
+      .category{
+        align-content: center;
+        padding: 20px;
+      }
+
+      #category_img{
+        max-height: 200px;
+        max-width: 400px;
+      }
+
+      #container_body{
+        align-content: space-around;
+        padding: center;
+      }
+
+      .card_body {
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      cursor: pointer; /* Change cursor to pointer to indicate clickability */
+      transition: transform 0.3s ease; /* Add smooth transition */
+    }
+
+    /* Styles for the card when hovered */
+    .card_body:hover {
+      transform: translateY(-5px); /* Move the card up a bit on hover */
+    }
+
+    /* Styles for the card title */
+    .card_body h2 {
+      color: #333;
+    }
+    </style>
+
+    
+  </head>
+  <body>
+    
+    <header>
+      <!-- Header Start -->
+      <div class="header-area header_area">
+          <div class="main-header">
+           <div class="header-bottom header-sticky">
+              <!-- Logo -->
+              <div class="logo">
+                  <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+              </div>
+              <div class="header-left  d-flex f-right align-items-center">
+                  <!-- Main-menu -->
+                  <div class="main-menu f-right d-none d-lg-block">
+                      <nav> 
+                          <ul id="navigation">                                                                                                                                     
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="about.html">About</a></li>
+                              <li><a href="services.html">Services</a></li>
+                              <li><a href="blog.html">Blog</a>
+                                  <ul class="submenu">
+                                      <li><a href="blog.html">Blog</a></li>
+                                      <li><a href="blog_details.html">Blog Details</a></li>
+                                      <li><a href="elements.html">Elements</a></li>
+                                  </ul>
+                              </li>
+                              <li><a href="contact.html">Contact</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+                  <!-- left Btn -->
+                  <div class="header-right-btn f-right d-none d-lg-block  ml-30">
+                      <a href="#" class="header-btn">Visit Us</a>
+                  </div>
+              </div>          
+              <!-- Mobile Menu -->
+              <div class="col-12">
+                  <div class="mobile_menu d-block d-lg-none"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Header End -->
+</header>
+
+<main>
+    <div class="album py-5 bg-light">
+    <section class="category">
+      <div id="container_body" class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"> 
+        </div>
+      </div>
+    </section>
+  </div>
+  </main>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="mb-1">&copy; 2024 Oasis</p>
+  </div>
+</footer>
+
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="js/Mens.js"></script>
+    <script>
+      function navigateToNextPage(pageUrl) {
+        // Change the current page's URL to the specified page URL
+        window.location.href = pageUrl;
+      }
+    </script>
+
+      
+  </body>
+</html>

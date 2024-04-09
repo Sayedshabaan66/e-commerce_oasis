@@ -1,0 +1,157 @@
+:root {
+  --primary: #31afb5;
+  --secondary: #2e2e2e;
+  --input: #31aeb54f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: linear-gradient(90deg, white, #31aeb5a8), url(images/light-bg.png);
+  background-size: cover;
+  background-blend-mode: color-burn;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 1px;
+  height: 100hv;
+}
+
+.showcase {
+  max-width: 600px;
+}
+
+.card-img {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 100%;
+  border: #0dccda 1px solid;
+  margin-top: 10px;
+}
+.card-img-1 {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 100%;
+  border: #0dccda 1px solid;
+  margin-top: 10px;
+  margin: 60px 10px;
+}
+
+.card-img-1 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.images {
+  display: flex;
+}
+.images:nth-child(2) {
+  padding: 50px;
+}
+
+.login-form {
+  min-width: 300px;
+}
+.login-form h6 {
+  margin-top: 0.5rem;
+}
+a {
+  text-decoration: none;
+  color: #0dccda;
+}
+
+a:hover {
+  color: #185e64;
+}
+
+.google-log-in {
+  background-color: transparent;
+  height: 2.4rem;
+  border: 0.1rem solid var(--secondary) !important;
+  outline: none;
+}
+.google-log-in:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
+button:active {
+  transform: scale(0.95);
+  transition: 0.1s;
+}
+
+.form-check {
+  margin: 0.4rem 0;
+}
+
+.login-form form .form-check-input {
+  accent-color: #0dccda !important;
+}
+
+#menu ul button {
+  background-color: var(--primary);
+  outline: none;
+  border: none;
+  width: 8rem;
+  height: 2.4rem;
+  font-weight: thin;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0px 3px 5px rgb(0, 0, 0, 0.2);
+}
+.signup:hover {
+  background-color: #2c9ea7 !important;
+  cursor: pointer;
+}
+
+.signup:active {
+  transform: scale(0.9) !important;
+  transition: 0.2s;
+}
+
+#menu ul {
+  display: flex;
+}
+
+#menu ul li {
+  padding-left: 2rem;
+}
+.login {
+  background-color: transparent;
+  height: 2.4rem;
+  border: 0.1rem solid var(--secondary) !important;
+  outline: none;
+  width: 8rem;
+}
+.login:hover {
+  background-color: var(--secondary) !important;
+  color: white !important;
+}
+.login:active {
+  transform: scale(0.96) !important;
+}
+
+.googleplay {
+  align-self: center;
+}
+.googleplay:hover {
+  cursor: pointer;
+  box-shadow: #0dccda36 0px 0px 10px;
+}

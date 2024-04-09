@@ -1,0 +1,84 @@
+// In a real scenario, this data would come from a backend server or a database
+const productsData = [
+    { name: 'Shirt', price: 29.99, image: '../dresses/Mens_Shirt.jpg', html:'index.html' },
+    { name: 'Pants', price: 39.99, image: '../dresses/Mens_Pants.jpg', html:'index.html' },
+    { name: 'T-Shirts', price: 49.99, image: '../dresses/Mens_T_Shirt.jpg', html:'index.html' },
+    { name: 'Jeans', price: 59.99, image: '../dresses/Mens_Jeans.jpg', html:'index.html' },
+    { name: 'Sherwani', price: 69.99, image: '../dresses/Mens_Sherwani.jpg', html:'index.html' },
+    { name: 'Suit', price: 100.99, image: '../dresses/Mens_Suit.jpg', html:'index.html' },
+    { name: 'Kurta', price: 39.99, image: '../dresses/Mens_Kurta.jpg', html:'index.html' },
+  ];
+  
+  // Function to generate product HTML
+  function generateProductHTML(product) {
+    return `
+    <div class="col">
+    <div class="card_body" onclick="navigateToNextPage('${product.html}')">
+        <div class="card shadow-sm">
+          <img class="bd-placeholder-img" src="${product.image}" alt="${product.name}">
+          <div class="card-body">
+            <h3>${product.name}</h3>
+            <p>$${product.price}</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    `;
+  }
+  
+  // Function to display products on the page
+  function displayProducts() {
+    const productsContainer = document.querySelector('.products .container .row');
+    let productsHTML = '';
+  
+    productsData.forEach(product => {
+      productsHTML += generateProductHTML(product);
+    });
+  
+    productsContainer.innerHTML = productsHTML;
+  }
+  
+  // Display products when the page loads
+  window.addEventListener('load', displayProducts);
+  
+  function navigateToNextPage(pageUrl) {
+    // Change the current page's URL to the specified page URL
+    window.location.href = pageUrl;
+  }
+
+  const categoryData = [
+    { name: 'Mens', image: '../dresses/Mens.jpeg', html: 'Mens.html' },
+    { name: 'Womens', image: '../dresses/Womens.jpg', html:'Womens.html'},
+  ];
+
+  // Function to generate product HTML
+  function generateCategoryHTML(category) {
+    return `
+    <div class="col">
+      <div class="card card_body" onclick="navigateToNextPage('${category.html}')">
+        <div class="card shadow-sm">
+          <img class="card-img-top" src="${category.image}" alt="${category.name}">
+          <div class="card-body">
+            <h3>${category.name}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    `;
+  }
+
+  // Function to display products on the page
+  function displayCategory() {
+    const categoryContainer = document.querySelector('.category .container .row');
+    let categoryHTML = '';
+  
+    categoryData.forEach(category => {
+      categoryHTML += generateCategoryHTML(category);
+    });
+  
+    categoryContainer.innerHTML = categoryHTML;
+  }
+  
+  // Display products when the page loads
+  window.addEventListener('load', displayCategory);
